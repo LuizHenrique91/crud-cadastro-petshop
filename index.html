@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/0221ca4ba5.js" crossorigin="anonymous"></script>
+  <title>Pet Shop</title>
+</head>
+  <body>
+    <main class="princpal">
+      <div  class="container">
+        <img src="img/Imagem-pet.png" alt="" class="imagem__lateral">
+        <section class="cadastro">
+          <form action="#" class="cadastro__formulario">
+            <label for="nome" class="cadastro__texto">Nome do Produto:</label>
+            <input type="text" name="" id="" class="cadastro__input" required>
+            <div class="cadastro__colunas">
+              <label for="preco" class="cadastro__texto cadastro__texto-preco">Preço:</label>
+              <input type="text" name="" id="" class="cadastro__input cadastro__input-preco" required>
+              <label for="data" class="cadastro__texto cadastro__texto-fabricacao">Data de fabricação:</label>
+              <input type="date" name="" id="" class="cadastro__input cadastro__input-fabricacao" required>
+            </div>
+            <label for="" class="cadastro__texto">Público alvo:</label>
+            <input type="text" name="" id="" class="cadastro__input" required>
+            <button type="submit" class="cadastro__botao">Salvar</button>
+          </form>
+          
+          <h3 class="texto__lista-produtos">Lista de Produtos</h3>
+          
+          <form action="" class="formulario__pesquisar">
+            <input type="search" name="" id="" class="pesquisar__input" placeholder="Pesquisar produto">
+            <button class="botao__pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          
+          <table class="tabela__produtos">
+            <thead>
+              <tr>
+                <th class="tabela__titulo">Nome do produto</th>
+                <th class="tabela__titulo">Preço</th>
+                <th class="tabela__titulo">Data de fabricação</th>
+                <th class="tabela__titulo">Público alvo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tabela__produto-linha">
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-botao">
+                  <Button class="tabela__botao--excluir"><i class="fa-solid fa-trash"></i></Button>
+                  <button class="tabela__botao--editar"><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+              <tr class="tabela__produto-linha">
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-botao">
+                  <Button class="tabela__botao--excluir"><i class="fa-solid fa-trash"></i></Button>
+                  <button class="tabela__botao--editar"><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+              <tr class="tabela__produto-linha">
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-coluna">Teste</td>
+                <td class="tabela__produto-botao">
+                  <Button class="tabela__botao--excluir"><i class="fa-solid fa-trash"></i></Button>
+                  <button class="tabela__botao--editar"><i class="fa-regular fa-pen-to-square"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
