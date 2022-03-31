@@ -1,0 +1,152 @@
+body {
+  padding: 0 1rem;
+}
+
+.princpal{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 1000PX;
+}
+
+.imagem__lateral {
+  width: 350px;
+}
+
+.cadastro{
+  border: 1px solid rgb(202, 202, 202);
+}
+.cadastro__formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.cadastro__texto {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+
+.cadastro__input{
+  margin-bottom: 1rem;
+  padding: .5rem 2rem;
+  border-radius: .4rem;
+  border: 1px solid rgb(202, 202, 202);
+  background-color: rgb(202, 202, 202, 0.2);;
+}
+
+.pesquisar__input, .cadastro__input:focus{
+  outline-color: #38174285;
+}
+
+.cadastro__colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "texto-preco texto-fabricacao"
+    "preco fabricacao";
+  column-gap: 2rem;
+}
+
+.cadastro__texto-preco {
+  grid-area: texto-preco;
+}
+
+.cadastro__input-preco{
+  grid-area: preco;
+}
+
+.cadastro__texto-fabricacao {
+  grid-area: texto-fabricacao;
+}
+
+.cadastro__input-fabricacao {
+  grid-area: fabricacao;
+}
+
+.cadastro__botao {
+  width: 30%;
+  background-color: green;
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+}
+
+.texto__lista-produtos {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.formulario__pesquisar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pesquisar__input {
+  border: 1px solid rgb(202, 202, 202);
+  background-color: rgb(202, 202, 202, 0.2);
+  padding: 0.5rem 2rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  width: 50%;
+}
+
+.botao__pesquisar{
+  background-color: rgb(202, 202, 202, 0.2);
+  border: 1px solid rgb(202, 202, 202);
+  padding: 0.4rem 0.8rem;
+}
+
+.tabela__produtos {
+  margin: auto;
+  width: 95%;
+}
+
+.tabela__titulo{
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.tabela__produto-linha:nth-child(even){
+  background-color: #511d6333;
+}
+
+.tabela__produto-linha:hover {
+  background-color: #260e2ec9;
+  color: white;
+}
+
+.tabela__produto-coluna {
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+}
+
+.tabela__produto-botao {
+  background-color: white;
+  color: black;
+}
+
+.tabela__botao--excluir {
+  color: red;
+  padding-left: 0.5rem;
+  font-size: 25px;
+}
+
+.tabela__botao--editar{
+  color: blue;
+  padding-left: 0.5rem;
+  font-size: 25px;
+}
