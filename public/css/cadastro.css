@@ -1,0 +1,67 @@
+.cadastro__titulo{
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.cadastro{
+  border: 1px solid rgb(202, 202, 202);
+}
+.cadastro__formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.cadastro__texto {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+
+.cadastro__input{
+  margin-bottom: 1rem;
+  padding: .5rem 2rem;
+  border-radius: .4rem;
+  border: 1px solid rgb(202, 202, 202);
+  background-color: rgb(202, 202, 202, 0.2);;
+}
+
+.pesquisar__input, .cadastro__input:focus{
+  outline-color: #38174285;
+}
+
+.cadastro__colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "texto-preco texto-fabricacao"
+    "preco fabricacao";
+  column-gap: 2rem;
+}
+
+.cadastro__texto-preco {
+  grid-area: texto-preco;
+}
+
+.cadastro__input-preco{
+  grid-area: preco;
+}
+
+.cadastro__texto-fabricacao {
+  grid-area: texto-fabricacao;
+}
+
+.cadastro__input-fabricacao {
+  grid-area: fabricacao;
+}
+
+.cadastro__botao {
+  width: 30%;
+  background-color: green;
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+}

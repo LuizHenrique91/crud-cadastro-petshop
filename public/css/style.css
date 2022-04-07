@@ -1,0 +1,39 @@
+body {
+  padding: 0 1rem;
+}
+
+.princpal{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 70%;
+}
+
+.imagem__lateral {
+  width: 350px;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu__item{
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.menu__link {
+  font-size: 1.5rem;
+  color: #381742;
+}
+
+.menu__link:hover{
+  transition-duration: 2s;
+  color: red;
+}

@@ -1,0 +1,75 @@
+.texto__lista-produtos {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.formulario__pesquisar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pesquisar__input {
+  border: 1px solid rgb(202, 202, 202);
+  background-color: rgb(202, 202, 202, 0.2);
+  padding: 0.5rem 2rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  width: 50%;
+}
+
+.botao__pesquisar{
+  background-color: rgb(202, 202, 202, 0.2);
+  border: 1px solid rgb(202, 202, 202);
+  padding: 0.4rem 0.8rem;
+}
+
+.tabela__secao{
+  height: 450px;
+  overflow: auto;
+}
+
+.tabela__produtos {
+  margin: auto;
+  width: 95%;
+}
+
+.tabela__titulo{
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.tabela__produto-linha:nth-child(even){
+  background-color: #511d6333;
+}
+
+.tabela__produto-linha:hover {
+  background-color: #260e2ec9;
+  color: white;
+}
+
+.tabela__produto-coluna {
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+}
+
+.tabela__produto-botao {
+  background-color: white;
+  color: black;
+}
+
+.tabela__botao--excluir {
+  color: red;
+  padding-left: 0.5rem;
+  font-size: 25px;
+}
+
+.tabela__botao--editar{
+  color: blue;
+  padding-left: 0.5rem;
+  font-size: 25px;
+}
