@@ -1,0 +1,15 @@
+<h1 class="cadastro__titulo">Atualizar Produto</h1>
+<form action="/produto/editado" method="POST" class="cadastro__formulario">
+  <label for="nome-produto" class="cadastro__texto">Nome do Produto:</label>
+  <input type="text" name="nome" id="nome-produto" class="cadastro__input" value="{{dados.dataValues.nome}}" required>
+  <div class="cadastro__colunas">
+    <label for="preco" class="cadastro__texto cadastro__texto-preco">Preço:</label>
+    <input type="text" name="preco" id="" class="cadastro__input cadastro__input-preco" value="{{dados.dataValues.preco}}" required>
+    <label for="data" class="cadastro__texto cadastro__texto-fabricacao">Data de fabricação:</label>
+    <input type="date" name="data" id="" class="cadastro__input cadastro__input-fabricacao" value="{{dados.dataValues.dataFabricacao}}" required>
+  </div>
+  <label for="" class="cadastro__texto">Público alvo:</label>
+  <input type="text" name="publico" id="" class="cadastro__input" value="{{dados.dataValues.publicoAlvo}}" required>
+  <input type="hidden" name="id" value="{{dados.dataValues.id}}">
+  <button type="submit" class="cadastro__botao" id="botao__salvar">Atualizar</button>
+</form>

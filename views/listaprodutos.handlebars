@@ -1,0 +1,34 @@
+<h3 class="texto__lista-produtos">Lista de Produtos</h3>
+      <div class="formulario__pesquisar">
+        <input type="search" name="pesquisar" id="pesquisar" value="" class="pesquisar__input" placeholder="Digite o Público Alvo">
+        <button class="botao__pesquisar" id="botao_pesquisar" onclick="pesquisar()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <section class="tabela__secao">
+        <table class="tabela__produtos">
+          <thead>
+            <tr>
+              <th class="tabela__titulo">Id</th>
+              <th class="tabela__titulo">Nome do produto</th>
+              <th class="tabela__titulo">Preço</th>
+              <th class="tabela__titulo">Data de fabricação</th>
+              <th class="tabela__titulo">Público alvo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each dadosProduto}}
+            <tr class="tabela__produto-linha">
+              <td class="tabela__produto-coluna">{{id}}</td>
+              <td class="tabela__produto-coluna">{{nome}}</td>
+              <td class="tabela__produto-coluna">{{preco}}</td>
+              <td class="tabela__produto-coluna">{{dataFabricacao}}</td>
+              <td class="tabela__produto-coluna" id="publico-alvo">{{publicoAlvo}}</td>
+              <td class="tabela__produto-botao">
+                <a href="/deletar/{{id}}"><Button class="tabela__botao--excluir"><i class="fa-solid fa-trash"></i></Button></a>
+                <a href="/alterarproduto/{{id}}"><button class="tabela__botao--editar" onclick="editar_produto()"><i class="fa-regular fa-pen-to-square"></i></button></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </section>
