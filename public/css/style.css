@@ -2,6 +2,17 @@ body {
   padding: 0 1rem;
 }
 
+.informacao__cadastrado{
+  background-color: #94dd988c;
+  padding: 1rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+}
+
+.informacao__cadastrado--fundo{
+  background-color: #49222e8c;
+}
+
 .princpal{
   display: flex;
   justify-content: center;

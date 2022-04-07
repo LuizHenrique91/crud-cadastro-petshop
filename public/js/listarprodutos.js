@@ -12,6 +12,10 @@ function pesquisar(){
     location.reload();
   }
 
+  else if(!nomesPublico.includes(valorPesquisa)){
+    alert("Produto Não encontrado");
+  }
+
   else if(nomesPublico.includes(valorPesquisa)){
     publivoAlvo.forEach(texto => {
       if (valorPesquisa != texto.textContent) {
