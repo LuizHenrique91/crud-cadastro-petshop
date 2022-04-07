@@ -6,7 +6,7 @@ const handlebars = require('express-handlebars');
 const moment = require('moment');
 const path = require('path');
 const session = require('express-session')
-const flash = require('connect-flash')
+const flash = require('connect-flash');
 
 //Template
 app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}));
@@ -26,6 +26,13 @@ app.use(session({
 }))
 app.use(flash())
 
+//Middleware
+app.use((req, res, next) => {
+  res.locals.sucesso = req.flash("sucesso")
+  res.locals.erro = req.flash("erro")
+  next()
+})
+
 //rotas s Seguir
 app.get('/', function(req, res){
   res.render('cadastroproduto')
@@ -39,9 +46,11 @@ app.post('/', function(req, res){
     dataFabricacao: req.body.data,
     publicoAlvo: req.body.publico
   }).then(function(){
-    console.log('Cadastrado com Sucesso');
+    req.flash("sucesso", "Produto Cadastrado com Sucesso")
+    res.redirect('/')
   }).catch(function(erro) {
-    console.log('Erro = ' + erro);
+    req.flash("erro", "Por favor, utilize ponto no preço")
+    res.redirect('/')
   })
 })
 
@@ -57,7 +66,8 @@ app.get('/listaprodutos', function(req, res){
 //Deletar
 app.get('/deletar/:id', function(req, res){
   Post.destroy({where: {'id': req.params.id}}).then(function(){
-    res.send('Produto deletado')
+    req.flash("sucesso", "Produto Deletado com Sucesso")
+    res.redirect('/listaprodutos')
   }).catch(function(erro){
     res.send('Este produro não existe')
   })
@@ -77,6 +87,12 @@ app.post('/produto/editado', function(req, res){
     where: {
       id: req.body.id
     }
+  }).then(function(){
+    req.flash('sucesso', "Atualizado com sucesso")
+    res.redirect('/listaprodutos')
+  }).catch(function(erro){
+    req.flash('erro', "Por favor, utilize ponto no preço ao atualizar o produto")
+    res.redirect('/listaprodutos')
   })
 })
  

@@ -16,6 +16,12 @@
       <div  class="container">
         <img src="/img/Imagem-pet.png" alt="" class="imagem__lateral">
           <section class="cadastro">
+            {{#if sucesso}}
+              <div class="informacao__cadastrado">{{sucesso}}</div>
+            {{/if}}
+            {{#if erro}}
+              <div class="informacao__cadastrado informacao__cadastrado--fundo">{{erro}}</div>
+            {{/if}}
             <ul class="menu">
               <li class="menu__item"><a href="/" class="menu__link">Cadastrar Produtos</a></li>
               <li class="menu__item"><a href="/listaprodutos" class="menu__link">Listar Produtos</a></li>
